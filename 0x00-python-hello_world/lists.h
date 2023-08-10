@@ -1,25 +1,24 @@
-#ifndef ALTERNATE_LISTS_H
-#define ALTERNATE_LISTS_H
+#ifndef LISTS_H
+#define LISTS_H
+
 #include <stdlib.h>
 
 /**
- * struct alternate_node - singly linked list node
- * @value: integer value
- * @next_ptr: points to the next node
+ * struct listint_s - singly linked list
+ * @n: integer
+ * @next: points to the next node
  *
- * Description: Definition of a singly linked list node structure
- * 
+ * Description: singly linked list node structure
  */
-typedef struct alternate_node
+typedef struct listint_s
 {
-    int value;
-    struct alternate_node *next_ptr;
-} alternate_list_t;
+	int n;
+	struct listint_s *next;
+} listint_t;
 
-size_t alternate_print_list(const alternate_list_t *head_ptr);
-alternate_list_t *alternate_add_node(alternate_list_t **head_ptr, const int value);
-void alternate_free_list(alternate_list_t *head_ptr);
-int alternate_check_cycle(alternate_list_t *head_ptr);
+size_t print_listint(const listint_t *h);
+listint_t *add_nodeint(listint_t **head, const int n);
+void free_listint(listint_t *head);
+int check_cycle(listint_t *list);
 
-#endif /* ALTERNATE_LISTS_H */
-
+#endif /* LISTS_H */
