@@ -1,0 +1,13 @@
+#!/usr/bin/python3
+def enhanced_sum(x, y):
+    """Enhanced sum function
+
+    Args:
+        x: first integer
+        y: second integer
+
+    Returns:
+        The return value. x + y
+    """
+    return (x + y)
+
